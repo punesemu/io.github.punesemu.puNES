@@ -83,6 +83,7 @@ modules:
             - "-DENABLE_OPENGL_CG=ON"
     sources:
       - type: archive
+        archive-type: tar-gzip
         url: https://api.github.com/repos/punesemu/puNES/tarball/v0.110
         sha256: f3e71f70578a22bedcdc1c1d33e1054abebc3544d4a9d8b18ceae267d1316832
         x-checker-data:
