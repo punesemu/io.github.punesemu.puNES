@@ -23,6 +23,10 @@ modules:
       - type: archive
         url: https://archive.mesa3d.org/glu/glu-9.0.2.tar.gz
         sha256: 24effdfb952453cc00e275e1c82ca9787506aba0282145fff054498e60e19a65
+        x-checker-data:
+            type: anitya
+            project-id: 13518
+            url-template: https://archive.mesa3d.org/glu/glu-$version.tar.gz
 
   - name: p7zip
     no-autogen: true
@@ -79,5 +83,11 @@ modules:
             - "-DENABLE_OPENGL_CG=ON"
     sources:
       - type: archive
-        url: https://github.com/punesemu/puNES/archive/refs/tags/v0.110.tar.gz
-        sha256: f72507daaf8d5a13184829ea2f875db49f5bc93ab8e1c8e48b2ed9a32612fe1d
+        archive-type: tar-gzip
+        url: https://api.github.com/repos/punesemu/puNES/tarball/v0.110
+        sha256: f3e71f70578a22bedcdc1c1d33e1054abebc3544d4a9d8b18ceae267d1316832
+        x-checker-data:
+            type: json
+            url: https://api.github.com/repos/punesemu/puNES/releases/latest
+            version-query: .tag_name
+            url-query: .tarball_url
