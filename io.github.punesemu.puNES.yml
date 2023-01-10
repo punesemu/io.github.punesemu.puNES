@@ -68,7 +68,7 @@ modules:
         sha256: e8ff01e6cc38d1b3fd56a083f5860737dbd2f319a39037528fb1a74a89ae9878
 
   - name: puNES
-    buildsystem: cmake
+    buildsystem: cmake-ninja
     build-options:
       config-opts:
         - "-DENABLE_RELEASE=ON"
