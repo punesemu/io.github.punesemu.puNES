@@ -9,6 +9,9 @@ finish-args:
   - --share=ipc
   - --device=all
   - --socket=pulseaudio
+# Get access to the files
+  - --filesystem=home:ro
+  - --filesystem=xdg-run/gvfs:ro
   - --filesystem=/run/udev:ro
 cleanup:
   - '*.a'
@@ -91,3 +94,5 @@ modules:
             url: https://api.github.com/repos/punesemu/puNES/releases/latest
             version-query: .tag_name
             url-query: .tarball_url
+      - type: patch
+        path: punes-0.110-desktop-in.patch
