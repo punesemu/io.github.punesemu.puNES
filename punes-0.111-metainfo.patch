@@ -1,0 +1,19 @@
+Subject: [PATCH] Update io.github.punesemu.puNES.metainfo.xml.
+---
+Index: misc/io.github.punesemu.puNES.metainfo.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/misc/io.github.punesemu.puNES.metainfo.xml b/misc/io.github.punesemu.puNES.metainfo.xml
+--- a/misc/io.github.punesemu.puNES.metainfo.xml	(revision 613b7b44baddbe7bf2ff79e72348c3ee35f3e70b)
++++ b/misc/io.github.punesemu.puNES.metainfo.xml	(date 1708874603731)
+@@ -95,7 +95,7 @@
+   </releases>
+   <url type="homepage">https://github.com/punesemu/puNES</url>
+   <url type="bugtracker">https://github.com/punesemu/puNES/issues</url>
+-  <url type="donation">https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=QPPXNRL5NAHDC</url>
++  <url type="donation">https://github.com/sponsors/punesemu</url>
+   <url type="translate">https://crowdin.com/project/punes</url>
+   <categories>
+     <category>Game</category>

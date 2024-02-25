@@ -95,3 +95,5 @@ modules:
             url: https://api.github.com/repos/punesemu/puNES/releases/latest
             version-query: .tag_name
             url-query: .tarball_url
+      - type: patch
+        path: punes-0.111-metainfo.patch
