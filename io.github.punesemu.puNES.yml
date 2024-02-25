@@ -88,12 +88,10 @@ modules:
     sources:
       - type: archive
         archive-type: tar-gzip
-        url: https://api.github.com/repos/punesemu/puNES/tarball/v0.110
-        sha256: f3e71f70578a22bedcdc1c1d33e1054abebc3544d4a9d8b18ceae267d1316832
+        url: https://api.github.com/repos/punesemu/puNES/tarball/v0.111
+        sha256: d7cbe303d211bf20b12448a674b17539f8d7c465e465d153585d9dcea915916c
         x-checker-data:
             type: json
             url: https://api.github.com/repos/punesemu/puNES/releases/latest
             version-query: .tag_name
             url-query: .tarball_url
-      - type: patch
-        path: punes-0.110-desktop-in.patch
