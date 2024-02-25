@@ -89,7 +89,7 @@ modules:
       - type: archive
         archive-type: tar-gzip
         url: https://api.github.com/repos/punesemu/puNES/tarball/v0.111
-        sha256: d7cbe303d211bf20b12448a674b17539f8d7c465e465d153585d9dcea915916c
+        sha256: 438c23a7b69e303b36a13e82505b66e2bd376177c29aa2b13f6a64ccf03772cb
         x-checker-data:
             type: json
             url: https://api.github.com/repos/punesemu/puNES/releases/latest
