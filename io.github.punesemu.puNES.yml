@@ -1,6 +1,6 @@
 app-id: io.github.punesemu.puNES
 runtime: org.kde.Platform
-runtime-version: "5.15-23.08"
+runtime-version: 5.15-23.08
 sdk: org.kde.Sdk
 command: punes
 finish-args:
@@ -28,9 +28,9 @@ modules:
         url: https://archive.mesa3d.org/glu/glu-9.0.3.tar.xz
         sha256: bd43fe12f374b1192eb15fe20e45ff456b9bc26ab57f0eee919f96ca0f8a330f
         x-checker-data:
-            type: anitya
-            project-id: 13518
-            url-template: https://archive.mesa3d.org/glu/glu-$version.tar.xz
+          type: anitya
+          project-id: 13518
+          url-template: https://archive.mesa3d.org/glu/glu-$version.tar.xz
 
   - name: p7zip
     no-autogen: true
@@ -56,7 +56,7 @@ modules:
     only-arches:
       - x86_64
     buildsystem: simple
-    build-commands: 
+    build-commands:
       - mkdir -p ${FLATPAK_DEST}/lib/pkgconfig
       - install -m 0644 usr/lib64/libCg.so ${FLATPAK_DEST}/lib
       - install -m 0644 usr/lib64/libCgGL.so ${FLATPAK_DEST}/lib
@@ -75,25 +75,25 @@ modules:
     buildsystem: cmake-ninja
     build-options:
       config-opts:
-        - "-DENABLE_RELEASE=ON"
-        - "-DENABLE_FFMPEG=ON"
-        - "-DENABLE_OPENGL=ON"
-        - "-DENABLE_OPENGL_CG=OFF"
-        - "-DENABLE_FULLSCREEN_RESFREQ=ON"
-        - "-DDISABLE_PORTABLE_MODE=ON"
-      arch: 
+        - -DENABLE_RELEASE=ON
+        - -DENABLE_FFMPEG=ON
+        - -DENABLE_OPENGL=ON
+        - -DENABLE_OPENGL_CG=OFF
+        - -DENABLE_FULLSCREEN_RESFREQ=ON
+        - -DDISABLE_PORTABLE_MODE=ON
+      arch:
         x86_64:
           config-opts:
-            - "-DENABLE_OPENGL_CG=ON"
+            - -DENABLE_OPENGL_CG=ON
     sources:
       - type: archive
         archive-type: tar-gzip
-        url: https://api.github.com/repos/punesemu/puNES/tarball/v0.110
-        sha256: f3e71f70578a22bedcdc1c1d33e1054abebc3544d4a9d8b18ceae267d1316832
+        url: https://api.github.com/repos/punesemu/puNES/tarball/v0.111
+        sha256: 438c23a7b69e303b36a13e82505b66e2bd376177c29aa2b13f6a64ccf03772cb
         x-checker-data:
-            type: json
-            url: https://api.github.com/repos/punesemu/puNES/releases/latest
-            version-query: .tag_name
-            url-query: .tarball_url
+          type: json
+          url: https://api.github.com/repos/punesemu/puNES/releases/latest
+          version-query: .tag_name
+          url-query: .tarball_url
       - type: patch
-        path: punes-0.110-desktop-in.patch
+        path: punes-0.111-metainfo.patch
